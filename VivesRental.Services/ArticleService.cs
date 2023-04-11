@@ -47,7 +47,7 @@ public class ArticleService : IArticleService
         };
 
         _context.Articles.Add(article);
-
+        
         await _context.SaveChangesAsync();
 
         return await GetAsync(article.Id);

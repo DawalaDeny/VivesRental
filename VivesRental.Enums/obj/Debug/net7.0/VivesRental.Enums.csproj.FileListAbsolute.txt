@@ -22,3 +22,15 @@ C:\Users\shabo\Desktop\School\2022-2023\Web2\Eindopdracht\VivesRental.Enums\obj\
 C:\Users\shabo\Desktop\School\2022-2023\Web2\Eindopdracht\VivesRental.Enums\obj\Debug\net7.0\refint\VivesRental.Enums.dll
 C:\Users\shabo\Desktop\School\2022-2023\Web2\Eindopdracht\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.pdb
 C:\Users\shabo\Desktop\School\2022-2023\Web2\Eindopdracht\VivesRental.Enums\obj\Debug\net7.0\ref\VivesRental.Enums.dll
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\bin\Debug\net7.0\VivesRental.Enums.deps.json
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\bin\Debug\net7.0\VivesRental.Enums.dll
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\bin\Debug\net7.0\VivesRental.Enums.pdb
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.csproj.AssemblyReference.cache
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.AssemblyInfoInputs.cache
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.AssemblyInfo.cs
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.csproj.CoreCompileInputs.cache
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.dll
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\refint\VivesRental.Enums.dll
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\VivesRental.Enums.pdb
+C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\VivesRental.Enums\obj\Debug\net7.0\ref\VivesRental.Enums.dll
