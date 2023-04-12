@@ -36,17 +36,17 @@ namespace VivesRental.API.Controllers
     
     //Create new customer
     [HttpPost]
-    public async Task<IActionResult> CreateAsync([FromBody] CustomerRequest entity)
+    public async Task<IActionResult> CreateAsync([FromBody] CustomerRequest request)
     {
-        var customer = await customerService.CreateAsync(entity);
+        var customer = await customerService.CreateAsync(request);
         return Ok(customer);
     }
 
     //Edit a customer
     [HttpPut("{id:Guid}")]
-    public async Task<IActionResult> UpdateAsync([FromRoute] Guid id, [FromBody] CustomerRequest entity)
+    public async Task<IActionResult> UpdateAsync([FromRoute] Guid id, [FromBody] CustomerRequest request)
     {
-        var customer = await customerService.EditAsync(id, entity);
+        var customer = await customerService.EditAsync(id, request);
         return Ok(customer);
     }
     

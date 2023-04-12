@@ -11,7 +11,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ArticleService>();
+
+
+
 builder.Services.AddDbContext<VivesRentalDbContext>(options =>
 {
     options.UseInMemoryDatabase(nameof(VivesRentalDbContext));
