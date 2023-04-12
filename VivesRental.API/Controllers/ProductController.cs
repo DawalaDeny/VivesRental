@@ -28,7 +28,7 @@ namespace VivesRental.API.Controllers
             return Ok(products);
         }
 
-        //Get a product with its ID
+        //Get a product from its ID
         [HttpGet("{id:Guid}")]
         public async Task<IActionResult> GetAsync(Guid id)
         {
@@ -58,7 +58,7 @@ namespace VivesRental.API.Controllers
             await productService.RemoveAsync(id);
             return Ok();
         }
-        //Create a new product
+        //Generate articles for product
         [HttpPost("{productId:Guid}")]
         public async Task<IActionResult> GenerateArticlesAsync(Guid productId, int amount)
         {
