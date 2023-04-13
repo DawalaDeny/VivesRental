@@ -13,8 +13,7 @@ namespace VivesRental.API.Controllers
     {
 
         private readonly ArticleService articleService;
-
-
+        
         public ArticleController(ArticleService articleService)
         {
             this.articleService = articleService;

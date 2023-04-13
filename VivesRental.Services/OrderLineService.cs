@@ -45,7 +45,7 @@ public class OrderLineService : IOrderLineService
             .Where(a => a.Id == articleId)
             .ApplyFilter(articleFilter)
             .SingleOrDefaultAsync();
-
+        
         if (article == null)
         {
             //Article does not exist or is not available.

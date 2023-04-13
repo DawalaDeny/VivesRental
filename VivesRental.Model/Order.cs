@@ -14,6 +14,6 @@ public class Order
     public string CustomerEmail { get; set; } = null!;
     public string CustomerPhoneNumber { get; set; } = null!;
     public DateTime CreatedAt { get; set; }
-
+    
     public IList<OrderLine> OrderLines { get; set; } = new List<OrderLine>();
 }

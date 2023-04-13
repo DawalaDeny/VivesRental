@@ -48,7 +48,7 @@ public class ArticleReservationService : IArticleReservationService
         };
 
         _context.ArticleReservations.Add(articleReservation);
-
+        
         await _context.SaveChangesAsync();
 
         return await GetAsync(articleReservation.Id);

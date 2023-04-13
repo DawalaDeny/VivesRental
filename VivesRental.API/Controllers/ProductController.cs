@@ -14,7 +14,7 @@ namespace VivesRental.API.Controllers
 
         private readonly ProductService productService;
 
-
+        
         public ProductController(ProductService productService)
         {
             this.productService = productService;

@@ -44,9 +44,9 @@ namespace VivesRental.API.Controllers
 
         //Change dates of orderlines because it's returned
         [HttpPut("{id:Guid}")]
-        public async Task<IActionResult> ReturnAsync([FromRoute] Guid orderid, [FromBody] DateTime returnedAt)
+        public async Task<IActionResult> ReturnAsync([FromRoute] Guid id, DateTime returnedAt)
         {
-            var order = await orderService.ReturnAsync(orderid, returnedAt);
+            var order = await orderService.ReturnAsync(id, returnedAt);
             return Ok(order);
         }
     }

@@ -14,7 +14,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<OrderLineService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ArticleReservationService>();
 builder.Services.AddScoped<ArticleService>();
 
 
