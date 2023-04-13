@@ -43,7 +43,7 @@ namespace VivesRental.API.Controllers
             var product = await productService.CreateAsync(request);
             return Ok(product);
         }
-
+        
         //Edit a product
         [HttpPut("{id:Guid}")]
         public async Task<IActionResult> UpdateAsync([FromRoute] Guid id, [FromBody] ProductRequest request)

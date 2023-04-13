@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "es3fCvNZgP+G43j97+OUx/QkkfhdVEGFWpxs/spsqfg=",
+  "Hash": "ZwKa9iUkMkAvFadoIhNiYYTzJgfhGJ1zU/7pDQguN4U=",
   "Source": "Vives",
   "BasePath": "_content/Vives",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\CSS-sections\\homepage.css",
+      "SourceId": "Vives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\",
+      "BasePath": "_content/Vives",
+      "RelativePath": "CSS-sections/homepage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CSS-sections\\homepage.css"
     },
     {
       "Identity": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\favicon.ico",
