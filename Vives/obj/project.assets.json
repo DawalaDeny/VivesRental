@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "VivesRental.Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/VivesRental.Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VivesRental.Enums.dll": {}
+        }
+      },
+      "VivesRental.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "VivesRental.Enums": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VivesRental.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VivesRental.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "VivesRental.Enums/1.0.0": {
+      "type": "project",
+      "path": "../VivesRental.Enums/VivesRental.Enums.csproj",
+      "msbuildProject": "../VivesRental.Enums/VivesRental.Enums.csproj"
+    },
+    "VivesRental.Model/1.0.0": {
+      "type": "project",
+      "path": "../VivesRental.Model/VivesRental.Model.csproj",
+      "msbuildProject": "../VivesRental.Model/VivesRental.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "VivesRental.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\shabo\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj": {
+              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IList<VivesRental.Model.Customer>
+
+<h1>Customer management</h1>
+<button class="alert-success"><a class=" alert-success" asp-controller="CustomerManagement" asp-action="addCustomer"> Add a customer </a></button>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Orders</th>
+        <th scope="col">Reservations</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var customer in Model)
+    {
+        <partial name="IndexPartial" model="customer" />
+    }
+    </tbody>
+</table>

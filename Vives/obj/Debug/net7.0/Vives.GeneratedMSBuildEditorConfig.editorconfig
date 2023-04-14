@@ -16,12 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\shabo\Source\Repos\DawalaDeny\VivesRental\Vives
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/CustomerManagement/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/CustomerManagement/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/CustomerManagement/IndexPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XEluZGV4UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/shabo/Source/Repos/DawalaDeny/VivesRental/Vives/Views/Shared/Error.cshtml]

@@ -10,4 +10,12 @@
     <None Include="wwwroot\CSS-sections\homepage.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Settings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VivesRental.Model\VivesRental.Model.csproj" />
+  </ItemGroup>
+
 </Project>

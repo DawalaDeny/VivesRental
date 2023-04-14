@@ -1,9 +1,19 @@
+
+using Vives.SDK;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpClient("VivesRentalAPI",
+    options => { options.BaseAddress = new Uri("https://localhost:7034/"); });
+
+builder.Services.AddScoped<CustomerManagementSdk>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
