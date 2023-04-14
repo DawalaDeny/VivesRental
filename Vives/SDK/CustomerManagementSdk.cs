@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using VivesRental.Model;
+using VivesRental.Services.Model.Requests;
+using VivesRental.Services.Model.Results;
 
 namespace Vives.SDK
 {
@@ -13,7 +15,7 @@ namespace Vives.SDK
             this.httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IList<Customer>> Find()
+        public async Task<IList<CustomerResult>> Find()
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Customer";
@@ -21,15 +23,15 @@ namespace Vives.SDK
 
             response.EnsureSuccessStatusCode();
 
-            var customers = await response.Content.ReadFromJsonAsync<IList<Customer>>();
+            var customers = await response.Content.ReadFromJsonAsync<IList<CustomerResult>>();
             if (customers is null)
             {
-                return new List<Customer>();
+                return new List<CustomerResult>();
             }
 
             return customers;
         }
-        public async Task<Customer?> Create(Customer customer)
+        public async Task<CustomerResult?> Create(CustomerRequest customer)
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Customer";
@@ -37,7 +39,7 @@ namespace Vives.SDK
             
             response.EnsureSuccessStatusCode();
 
-            return await response.Content.ReadFromJsonAsync<Customer>();
+            return await response.Content.ReadFromJsonAsync<CustomerResult>();
         }
 
     }

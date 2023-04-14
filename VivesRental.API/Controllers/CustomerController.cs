@@ -25,7 +25,7 @@ namespace VivesRental.API.Controllers
         var customers = await customerService.FindAsync();
         return Ok(customers);
     }
-
+        
     //Get a single customer with ID
     [HttpGet("{id:Guid}")]
     public async Task <IActionResult> GetAsync(Guid id)

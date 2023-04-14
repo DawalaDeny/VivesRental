@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vives.SDK;
 using VivesRental.Model;
+using VivesRental.Services.Model.Requests;
+using VivesRental.Services.Model.Results;
 
 namespace Vives.Controllers
 {
@@ -27,7 +29,7 @@ namespace Vives.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> add(Customer customer)
+        public async Task<IActionResult> add(CustomerRequest customer)
         {
             if (!ModelState.IsValid)
             {
