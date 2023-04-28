@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vives.SDK;
-using VivesRental.Model;
 using VivesRental.Services.Model.Requests;
-using VivesRental.Services.Model.Results;
+
 
 namespace Vives.Controllers
 {

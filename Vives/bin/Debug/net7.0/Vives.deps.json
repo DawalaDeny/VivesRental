@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v7.0": {
       "Vives/1.0.0": {
         "dependencies": {
-          "VivesRental.Model": "1.0.0",
           "VivesRental.Services.Model": "1.0.0"
         },
         "runtime": {
@@ -18,14 +17,6 @@
       "VivesRental.Enums/1.0.0": {
         "runtime": {
           "VivesRental.Enums.dll": {}
-        }
-      },
-      "VivesRental.Model/1.0.0": {
-        "dependencies": {
-          "VivesRental.Enums": "1.0.0"
-        },
-        "runtime": {
-          "VivesRental.Model.dll": {}
         }
       },
       "VivesRental.Services.Model/1.0.0": {
@@ -45,11 +36,6 @@
       "sha512": ""
     },
     "VivesRental.Enums/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "VivesRental.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

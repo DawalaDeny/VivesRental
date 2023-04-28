@@ -1,0 +1,23 @@
+﻿@model IList<ProductResult>
+<h1>All products</h1>
+<button class="alert-success"><a class=" alert-success" asp-controller="CustomerManagement" asp-action="addCustomer"> Add product </a></button>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th scope="col">Name</th>
+		<th scope="col">Description</th>
+		<th scope="col">Manufacturer</th>
+		<th scope="col">Publisher</th>
+		<th scope="col">Expiration days</th>
+		<th scope="col">Articles</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var product in Model)
+	{
+		<partial name="IndexPartial" model="product" />
+	}
+	</tbody>
+	
+</table>

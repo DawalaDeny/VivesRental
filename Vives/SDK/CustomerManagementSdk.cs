@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
-using VivesRental.Model;
 using VivesRental.Services.Model.Requests;
 using VivesRental.Services.Model.Results;
 
