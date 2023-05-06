@@ -30,7 +30,17 @@ namespace Vives.SDK
 
             return customers;
         }
-        public async Task<CustomerResult?> Create(CustomerRequest customer)
+        public async Task<CustomerResult?> GetAsync(Guid id)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Customer/{id}";
+            var response = await client.GetAsync(route);
+
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadFromJsonAsync<CustomerResult>();
+        }
+        public async Task<CustomerResult?> CreateAsync(CustomerRequest customer)
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Customer";
@@ -40,6 +50,15 @@ namespace Vives.SDK
 
             return await response.Content.ReadFromJsonAsync<CustomerResult>();
         }
+        public async Task DeleteAsync(Guid id)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Customer/{id}";
+            var response = await client.DeleteAsync(route);
 
+            response.EnsureSuccessStatusCode();
+
+            
+        }
     }
 }

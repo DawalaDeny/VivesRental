@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7pzAIdFa073vSLu3/gLPXqyZs9jmA3Gusyf1bs6tMDXLyI5E9q1w2HasjHlcdVcKvOX1hjBZWtAW797ZOn9gQA==",
+  "dgSpecHash": "2pSkEy/AKR+kQuuvyKCz81ucBTLKVEt1HngE7JEEC4DG3U6RT2QSDkyiRwBdz+yyKxgMz2SUs+nGBTtF2v1ftg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Tests\\VivesRental.Model.Tests.csproj",
+  "projectFilePath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Tests\\VivesRental.Model.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shabo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\shabo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

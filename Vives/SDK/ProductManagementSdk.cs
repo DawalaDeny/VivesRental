@@ -28,6 +28,15 @@ namespace Vives.SDK
 
             return products;
         }
+        public async Task<ProductResult?> Create(ProductRequest product)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = "api/Product";
+            var response = await client.PostAsJsonAsync(route, product);
 
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadFromJsonAsync<ProductResult>();
+        }
     }
 }

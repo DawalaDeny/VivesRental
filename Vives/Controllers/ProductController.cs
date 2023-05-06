@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vives.SDK;
+using VivesRental.Services.Model.Requests;
 
 namespace Vives.Controllers
 {
@@ -18,5 +19,22 @@ namespace Vives.Controllers
 
 			return View(products);
 		}
-	}
+        public IActionResult addProduct()
+        {
+            return View("form");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> add(ProductRequest product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("form", product);
+            }
+
+            await Sdk.Create(product);
+
+            return RedirectToAction("Index");
+        }
+    }
 }

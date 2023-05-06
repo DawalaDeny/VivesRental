@@ -10,6 +10,7 @@ builder.Services.AddHttpClient("VivesRentalAPI",
     options => { options.BaseAddress = new Uri("https://localhost:7034/"); });
 
 builder.Services.AddScoped<CustomerManagementSdk>();
+builder.Services.AddScoped<ProductManagementSdk>();
 
 var app = builder.Build();
 

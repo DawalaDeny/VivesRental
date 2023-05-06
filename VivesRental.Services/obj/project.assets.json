@@ -3327,11 +3327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj",
+      "projectUniqueName": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj",
       "projectName": "VivesRental.Services",
-      "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj",
+      "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj",
       "packagesPath": "C:\\Users\\shabo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\obj\\",
+      "outputPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3348,20 +3348,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Extensions\\VivesRental.Model.Extensions.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Extensions\\VivesRental.Model.Extensions.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Extensions\\VivesRental.Model.Extensions.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model.Extensions\\VivesRental.Model.Extensions.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Abstractions\\VivesRental.Services.Abstractions.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Abstractions\\VivesRental.Services.Abstractions.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Abstractions\\VivesRental.Services.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Abstractions\\VivesRental.Services.Abstractions.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Model\\VivesRental.Services.Model.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Model\\VivesRental.Services.Model.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Model\\VivesRental.Services.Model.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services.Model\\VivesRental.Services.Model.csproj"
             }
           }
         }

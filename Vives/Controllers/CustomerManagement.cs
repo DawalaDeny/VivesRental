@@ -22,22 +22,42 @@ namespace Vives.Controllers
             return View(customers);
         }
       
-        public IActionResult addCustomer()
+        public IActionResult AddCustomer()
         {
             return View("Form");
         }
 
         [HttpPost]
-        public async Task<IActionResult> add(CustomerRequest customer)
+        public async Task<IActionResult> Add(CustomerRequest customer)
         {
             if (!ModelState.IsValid)
             {
                 return View("Form",customer);
             }
             
-            await Sdk.Create(customer);
+            await Sdk.CreateAsync(customer);
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var customer = await Sdk.GetAsync(id);
+
+            if (customer is null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
+        }
+        [HttpPost("[controller]/Delete/{id:Guid?}")]
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        {
+            await Sdk.DeleteAsync(id);
+            return RedirectToAction("Index");
+
+        }
+
     }
 }

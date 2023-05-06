@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model VivesRental.Services.Model.Results.CustomerResult
+@model CustomerResult
 
 <tr>
     <td>@Model.FirstName</td>
@@ -8,4 +8,8 @@
     <td>@Model.PhoneNumber</td>
     <td></td>
     <td></td>
+    <td>
+        <button class="alert-danger"><a asp-controller="CustomerManagement" asp-action="Delete" asp-route-id="@Model.Id"> Delete </a></button>
+        <button class="alert-secondary"><a  asp-controller="CustomerManagement" asp-action="Edit"> Edit </a></button>
+    </td>
 </tr>

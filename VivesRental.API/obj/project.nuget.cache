@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "suoMaqPiTMlDHYl5gt32d1D0WwEZ9gDgioSXEVn0jyiJO4cxGPPQw6hisnjWrHWPQe9YwNRlwziRRL3bGMeSxA==",
+  "dgSpecHash": "nEl10UR3q4zp1lj5nXhYivb4mi4NkJBeGl9av5Aw4pi1K35rlHq62Jw2Cagl4ebmis/b3wU4Akhj/uGl0ozrtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.API\\VivesRental.API.csproj",
+  "projectFilePath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.API\\VivesRental.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shabo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\shabo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

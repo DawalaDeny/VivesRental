@@ -3482,11 +3482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\VivesRental.Tests.Data.csproj",
+      "projectUniqueName": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\VivesRental.Tests.Data.csproj",
       "projectName": "VivesRental.Tests.Data",
-      "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\VivesRental.Tests.Data.csproj",
+      "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\VivesRental.Tests.Data.csproj",
       "packagesPath": "C:\\Users\\shabo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\obj\\",
+      "outputPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Tests.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3503,14 +3503,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Model\\VivesRental.Model.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Repository\\VivesRental.Repository.csproj"
             },
-            "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj": {
-              "projectPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj"
+            "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj": {
+              "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Services\\VivesRental.Services.csproj"
             }
           }
         }
