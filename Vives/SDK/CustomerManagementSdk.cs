@@ -57,8 +57,16 @@ namespace Vives.SDK
             var response = await client.DeleteAsync(route);
 
             response.EnsureSuccessStatusCode();
+        }
+        public async Task<CustomerResult?> UpdateAsync(Guid id, CustomerRequest request)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Customer/{id}";
+            var response = await client.PutAsJsonAsync(route, request);
 
-            
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadFromJsonAsync<CustomerResult>();
         }
     }
 }

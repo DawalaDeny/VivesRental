@@ -59,5 +59,29 @@ namespace Vives.Controllers
 
         }
 
+        [HttpGet]
+        public async Task<IActionResult> EditPage(Guid id)
+        {
+            var customer = await Sdk.GetAsync(id);
+            if (customer is null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, CustomerRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+
+            await Sdk.UpdateAsync(id, request);
+
+            return RedirectToAction("Index");
+        }
     }
 }
