@@ -12,7 +12,7 @@ namespace Vives.SDK
             this.httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IList<ProductResult>> Find()
+        public async Task<IList<ProductResult>> FindAsync()
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Product";
@@ -28,7 +28,7 @@ namespace Vives.SDK
 
             return products;
         }
-        public async Task<ProductResult?> Create(ProductRequest product)
+        public async Task<ProductResult?> CreateAsync(ProductRequest product)
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Product";
@@ -36,6 +36,34 @@ namespace Vives.SDK
 
             response.EnsureSuccessStatusCode();
 
+            return await response.Content.ReadFromJsonAsync<ProductResult>();
+        }
+        public async Task<ProductResult?> GetAsync(Guid id)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Product/{id}";
+            var response = await client.GetAsync(route);
+
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadFromJsonAsync<ProductResult>();
+        }
+        public async Task DeleteAsync(Guid id)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Product/{id}";
+            var response = await client.DeleteAsync(route);
+
+            response.EnsureSuccessStatusCode();
+        }
+        public async Task<ProductResult?> UpdateAsync(Guid id, ProductRequest request)
+        {
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Product/{id}";
+            var response = await client.PutAsJsonAsync(route, request);
+
+            response.EnsureSuccessStatusCode();
+            
             return await response.Content.ReadFromJsonAsync<ProductResult>();
         }
     }

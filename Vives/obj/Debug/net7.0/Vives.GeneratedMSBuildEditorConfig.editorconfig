@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/CustomerManagement/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/CustomerManagement/EditPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJNYW5hZ2VtZW50XEVkaXRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/Product/EditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/shabo/source/repos/DawalaDeny/VivesRental/Vives/Views/Product/form.cshtml]

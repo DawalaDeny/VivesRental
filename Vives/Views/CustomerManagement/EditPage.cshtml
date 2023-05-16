@@ -3,7 +3,7 @@
 @model CustomerResult
 
 <h1>Edit customer</h1>
-<form asp-action="Edit" asp-method="post" asp-route-id="@Model.Id">
+<form asp-action="EditPage" asp-method="post" asp-route-id="@Model.Id">
     
     <div class="mb-3">
         <label asp-for="FirstName" class="form-label">@Model.FirstName</label>

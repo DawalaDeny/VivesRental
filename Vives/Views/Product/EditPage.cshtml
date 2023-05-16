@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.IO.Compression
+@model ProductResult
+
+<h1>Edit Product</h1>
+<form asp-action="EditPage" asp-method="post" asp-route-id="@Model.Id">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">@Model.Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">@Model.Description</label>
+        <input asp-for="Description" class="form-control" />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Manufacturer" class="form-label">@Model.Manufacturer</label>
+        <input asp-for="Manufacturer" class="form-control" />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Publisher" class="form-label">@Model.Publisher</label>
+        <input asp-for="Publisher" class="form-control" />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="RentalExpiresAfterDays" class="form-label">@Model.RentalExpiresAfterDays</label>
+        <input asp-for="RentalExpiresAfterDays" class="form-control" />
+
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>

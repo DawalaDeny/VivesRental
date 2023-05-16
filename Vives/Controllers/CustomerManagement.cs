@@ -72,11 +72,12 @@ namespace Vives.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Guid id, CustomerRequest request)
+        public async Task<IActionResult> EditPage(Guid id, CustomerRequest request)
         {
+            var customer = await Sdk.GetAsync(id);
             if (!ModelState.IsValid)
             {
-                return View(request);
+                return View(customer);
             }
 
             await Sdk.UpdateAsync(id, request);

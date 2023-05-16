@@ -11,6 +11,7 @@ builder.Services.AddHttpClient("VivesRentalAPI",
 
 builder.Services.AddScoped<CustomerManagementSdk>();
 builder.Services.AddScoped<ProductManagementSdk>();
+builder.Services.AddScoped<ArticleSdk>();
 
 var app = builder.Build();
 
