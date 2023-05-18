@@ -50,9 +50,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\Vives.csproj",
-      "projectName": "Vives",
-      "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\Vives.csproj",
+      "projectUniqueName": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\VivesRental.UI.csproj",
+      "projectName": "VivesRental.UI",
+      "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\VivesRental.UI.csproj",
       "packagesPath": "C:\\Users\\shabo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\obj\\",
       "projectStyle": "PackageReference",

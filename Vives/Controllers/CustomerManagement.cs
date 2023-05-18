@@ -17,7 +17,7 @@ namespace Vives.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var customers = await Sdk.Find();
+            var customers = await Sdk.FindAsync();
 
             return View(customers);
         }

@@ -14,7 +14,7 @@ namespace Vives.SDK
             this.httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IList<CustomerResult>> Find()
+        public async Task<IList<CustomerResult>> FindAsync()
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = "api/Customer";

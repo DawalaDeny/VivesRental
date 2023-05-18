@@ -1,0 +1,20 @@
+﻿@model IList<ArticleResult>
+
+<h1>All articles</h1>
+<button class="alert-success"><a class=" alert-success" asp-controller="Article" asp-action="Create"> Add new article </a></button>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product name</th>
+        <th>Status</th>
+        <th>Delete/Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var article in Model)
+    {
+        <partial name="indexPartial" model="article" />
+    }
+    </tbody>
+</table>

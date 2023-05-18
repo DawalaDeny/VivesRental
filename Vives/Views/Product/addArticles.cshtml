@@ -1,0 +1,14 @@
+﻿<h1>How many articles do you want to add?</h1>
+
+@model Guid
+
+<h1>Add Articles</h1>
+
+<form asp-controller="Product" asp-action="AddArticlesAdd" method="post">
+    <input type="hidden" name="id" value="@Model" />
+    <div class="mb-3">
+        <label for="articleCount" class="form-label">Number of Articles</label>
+        <input type="number" id="articleCount" name="amount" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

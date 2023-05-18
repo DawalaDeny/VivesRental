@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Vives.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Vives.bundle.scp.css"
+      "Id": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\VivesRental.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\VivesRental.UI.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\CSS-sections\\homepage.css",
@@ -249,20 +249,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Vives.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.VivesRental.UI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Vives.props",
-      "PackagePath": "build\\Vives.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.VivesRental.UI.props",
+      "PackagePath": "build\\VivesRental.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Vives.props",
-      "PackagePath": "buildMultiTargeting\\Vives.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.VivesRental.UI.props",
+      "PackagePath": "buildMultiTargeting\\VivesRental.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Vives.props",
-      "PackagePath": "buildTransitive\\Vives.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.VivesRental.UI.props",
+      "PackagePath": "buildTransitive\\VivesRental.UI.props"
     }
   ],
   "ElementsToRemove": []

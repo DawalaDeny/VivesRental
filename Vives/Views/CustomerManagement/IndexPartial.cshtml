@@ -6,8 +6,8 @@
     <td>@Model.LastName</td>
     <td>@Model.Email</td>
     <td>@Model.PhoneNumber</td>
-    <td></td>
-    <td></td>
+    <td>@Model.NumberOfOrders</td>
+    <td>@Model.NumberOfPendingOrders</td>
     <td>
         <button class="alert-danger"><a asp-controller="CustomerManagement" asp-action="Delete" asp-route-id="@Model.Id"> Delete </a></button>
         <button class="alert-secondary"><a asp-controller="CustomerManagement" asp-action="EditPage" asp-route-id="@Model.Id"> Edit </a></button>

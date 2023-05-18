@@ -1,0 +1,12 @@
+﻿@model ArticleResult
+
+<tr>
+    <td>@Model.ProductName</td>
+    <td>@Model.Status</td> 
+    <td>
+        
+        <button class="alert-danger"><a  asp-action="Delete" asp-route-id="@Model.Id"> Delete </a></button>
+        <button class="alert-secondary"><a  asp-action="Edit" asp-route-id="@Model.Id"> Edit </a></button>
+        
+    </td>
+</tr>

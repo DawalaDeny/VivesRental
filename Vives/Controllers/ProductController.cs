@@ -1,22 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vives.SDK;
 using VivesRental.Services.Model.Requests;
+using VivesRental.UI.SDK;
 
 namespace Vives.Controllers
 {
     public class ProductController : Controller
     {
         private readonly ProductManagementSdk Sdk;
+      
 
         public ProductController(ProductManagementSdk Sdk)
         {
             this.Sdk = Sdk;
+            
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             var products = await Sdk.FindAsync();
+
 
             return View(products);
         }
@@ -82,6 +86,20 @@ namespace Vives.Controllers
 
             await Sdk.UpdateAsync(id, request);
             
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult AddArticles(Guid id)
+        {
+            return View(id);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddArticlesAdd(Guid id, int amount)
+        {
+            
+            await Sdk.GenerateArticlesAsync(id, amount);
+
             return RedirectToAction("Index");
         }
     }

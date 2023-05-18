@@ -1,4 +1,5 @@
-﻿using VivesRental.Services.Model.Requests;
+﻿using Microsoft.AspNetCore.Mvc;
+using VivesRental.Services.Model.Requests;
 using VivesRental.Services.Model.Results;
 
 namespace Vives.SDK
@@ -65,6 +66,19 @@ namespace Vives.SDK
             response.EnsureSuccessStatusCode();
             
             return await response.Content.ReadFromJsonAsync<ProductResult>();
+        }
+
+      
+      
+        public async Task GenerateArticlesAsync(Guid id, int amount)
+        {
+
+            var client = httpClientFactory.CreateClient("VivesRentalAPI");
+            var route = $"api/Product/{id}";
+            var response = await client.PostAsJsonAsync(route, amount);
+            
+            response.EnsureSuccessStatusCode();
+            
         }
     }
 }

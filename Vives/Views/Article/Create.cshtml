@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model ArticleRequest
+@{
+    var products = ViewData["products"] as IList<ProductResult>;
+    
+}
+<h1>Add article</h1>
+<form asp-action="Create" method="post">
+    
+    <div class="mb-3">
+        <label asp-for="ProductId" class="form-label">Assigned To</label>
+        <select asp-for="ProductId" class="form-control">
+            <option value="">(Choose something)</option>
+            @if (products != null)
+            {
+                foreach (var product in products)
+                {
+                    <option value="@product.Id">@product.Name</option>
+                }
+            }
+        </select>
+     
+    </div>
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label">Status</label>
+        <input asp-for="Status" class="form-control" />
+   
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VivesRental.UI.props" />
+</Project>

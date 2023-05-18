@@ -31,11 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VivesRental.Model.Extension
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{8D75785A-2493-49E1-9310-007CC43926EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vives", "Vives\Vives.csproj", "{CAD3ABDE-ACAD-45B5-BFBF-6FE718852B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VivesRental.UI", "Vives\VivesRental.UI.csproj", "{CAD3ABDE-ACAD-45B5-BFBF-6FE718852B93}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{9D0699DD-A259-4C79-9F4D-1F95FD1E5311}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VivesRental.API", "VivesRental.API\VivesRental.API.csproj", "{038E2B10-C1F3-4C3D-AE5D-664B36289DB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VivesRental.API", "VivesRental.API\VivesRental.API.csproj", "{038E2B10-C1F3-4C3D-AE5D-664B36289DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

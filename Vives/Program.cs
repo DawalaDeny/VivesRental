@@ -1,5 +1,6 @@
 
 using Vives.SDK;
+using VivesRental.UI.SDK;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddHttpClient("VivesRentalAPI",
 builder.Services.AddScoped<CustomerManagementSdk>();
 builder.Services.AddScoped<ProductManagementSdk>();
 builder.Services.AddScoped<ArticleSdk>();
+
 
 var app = builder.Build();
 
