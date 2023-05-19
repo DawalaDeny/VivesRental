@@ -1,14 +1,16 @@
 ﻿<h1>How many articles do you want to add?</h1>
 
-@model Guid
+@model ArtikelsMakenVM
 
 <h1>Add Articles</h1>
 
 <form asp-controller="Product" asp-action="AddArticlesAdd" method="post">
-    <input type="hidden" name="id" value="@Model" />
+    <input asp-for="id" type="hidden" name="id" value="@Model.id" />
     <div class="mb-3">
-        <label for="articleCount" class="form-label">Number of Articles</label>
-        <input type="number" id="articleCount" name="amount" class="form-control" required />
+        <label asp-for="amount" class="form-label">How many articles?</label>
+        <input asp-for="amount" class="form-control" />
+   
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
+    @Html.HiddenFor(m => Model.id)
 </form>

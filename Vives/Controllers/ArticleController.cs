@@ -28,7 +28,10 @@ namespace VivesRental.UI.Controllers
         {
             var articles = await artSdk.FindAsync();
             var productArticles = articles.Where(a => a.ProductId == productId).ToList();
-            ViewBag.ProductId = productId;
+            var products = await prodSdk.FindAsync();
+            var productName = products.FirstOrDefault(a => a.Id == productId)?.Name;
+
+            ViewBag.ProductName = productName;
             return View(productArticles);
         }
 
@@ -81,18 +84,22 @@ namespace VivesRental.UI.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var articles = await artSdk.GetAsync(id);
+            var article = await artSdk.GetAsync(id);
+            
+            var name = article.ProductName;
+            ViewBag.Name = name;
 
-            if (articles is null)
+            if (article is null)
             {
                 return RedirectToAction("Index");
             }
 
-            return View(articles);
+            return View(article);
         }
         [HttpPost("[controller]/Delete/{id:Guid?}")]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
+
             await artSdk.DeleteAsync(id);
             return RedirectToAction("Index");
 

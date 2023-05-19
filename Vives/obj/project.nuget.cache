@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2+6h3ZEsCyEZXmci5NOBW65QkMjO31iFgx1S2ZXh4OKXoOaLOSUfz5vRKz9pICum8OdD2fxMpY5V4CuAiNWNvg==",
+  "dgSpecHash": "LOBf8/aRvYRFCmrnwzagB84bwJG2AZsDDNOL7/VJlYHgU0n1VZkM89GaZQzEZpknX1xBEqNRu0vw7EtLxcMkmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\VivesRental.UI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\shabo\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\shabo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,23 +1,23 @@
 ﻿@model IList<ArticleResult>
 @{
-    var productId = ViewBag.ProductId;
+    var productName = ViewBag.productName;
 }
 <h1>All articles for product:</h1>
-<h2>@productId </h2>
+<h2>@productName</h2>
 <br>
 <button class="alert-success"><a class=" alert-success" asp-controller="Article" asp-action="Create"> Add new article </a></button>
 
-<table class="table table-striped">
+<table class="table">
     <thead>
-    <tr>
-        <th>ProductName</th>
-        <th>Status</th>
-    </tr>
+        <tr>
+            <th>Status</th>
+            <th>Delete/Edit</th>
+        </tr>
     </thead>
     <tbody>
     @foreach (var article in Model)
     {
-        <partial name="indexPartial" model="article" />
+        <partial name="ProductPartial" model="article" />
     }
     </tbody>
 </table>

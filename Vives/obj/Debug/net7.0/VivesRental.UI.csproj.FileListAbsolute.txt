@@ -34,3 +34,4 @@ C:\Users\shabo\source\repos\DawalaDeny\VivesRental\Vives\obj\Debug\net7.0\refint
 C:\Users\shabo\source\repos\DawalaDeny\VivesRental\Vives\obj\Debug\net7.0\VivesRental.UI.pdb
 C:\Users\shabo\source\repos\DawalaDeny\VivesRental\Vives\obj\Debug\net7.0\VivesRental.UI.genruntimeconfig.cache
 C:\Users\shabo\source\repos\DawalaDeny\VivesRental\Vives\obj\Debug\net7.0\ref\VivesRental.UI.dll
+C:\Users\shabo\source\repos\DawalaDeny\VivesRental\Vives\bin\Debug\net7.0\Castle.Core.dll

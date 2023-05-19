@@ -11,7 +11,7 @@
         "projectName": "VivesRental.Enums",
         "projectPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Enums\\VivesRental.Enums.csproj",
         "packagesPath": "C:\\Users\\shabo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shabo\\Source\\Repos\\DawalaDeny\\VivesRental\\VivesRental.Enums\\obj\\",
+        "outputPath": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\VivesRental.Enums\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -157,6 +157,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

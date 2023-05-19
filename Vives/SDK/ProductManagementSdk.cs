@@ -74,7 +74,7 @@ namespace Vives.SDK
         {
 
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
-            var route = $"api/Product/{id}";
+            var route = $"api/Product/{id}/{amount}";
             var response = await client.PostAsJsonAsync(route, amount);
             
             response.EnsureSuccessStatusCode();

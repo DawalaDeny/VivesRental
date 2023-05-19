@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vives.SDK;
 using VivesRental.Services.Model.Requests;
+using VivesRental.UI.Models;
 using VivesRental.UI.SDK;
 
 namespace Vives.Controllers
@@ -92,14 +93,18 @@ namespace Vives.Controllers
         [HttpGet]
         public IActionResult AddArticles(Guid id)
         {
-            return View(id);
+            var artikelsMakenVm = new ArtikelsMakenVM();
+            artikelsMakenVm.id = id;
+            return View(artikelsMakenVm);
         }
         [HttpPost]
-        public async Task<IActionResult> AddArticlesAdd(Guid id, int amount)
+        public async Task<IActionResult> AddArticlesAdd(ArtikelsMakenVM artikelsMakenVm)
         {
+            var id = artikelsMakenVm.id;
+            var amount = artikelsMakenVm.amount;
             
             await Sdk.GenerateArticlesAsync(id, amount);
-
+            
             return RedirectToAction("Index");
         }
     }

@@ -59,10 +59,10 @@ namespace VivesRental.API.Controllers
             return Ok();
         }
         //Generate articles for product
-        [HttpPost("{productId:Guid}")]
-        public async Task<IActionResult> GenerateArticlesAsync(Guid productId, int amount)
+        [HttpPost("{Id:Guid}/{amount:int}")]
+        public async Task<IActionResult> GenerateArticlesAsync(Guid Id, int amount)
         {
-            var product = await productService.GenerateArticlesAsync(productId, amount);
+            var product = await productService.GenerateArticlesAsync(Id, amount);
             return Ok(product);
         }
     }

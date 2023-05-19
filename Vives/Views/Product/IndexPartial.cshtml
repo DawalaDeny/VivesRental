@@ -8,8 +8,8 @@
     <td>@Model.RentalExpiresAfterDays</td>
     <td> <a asp-controller="Article" asp-action="Product" asp-route-productId="@Model.Id"> @Model.NumberOfArticles </a></td>
     <td>
-        <button class="alert-success"><a class=" alert-success" asp-controller="Product" asp-action="AddArticles" asp-route-Guid="@Model.Id"> Add articles </a></button>
-
+        <button class="alert-success"><a class=" alert-success" asp-controller="Product" asp-action="AddArticles" asp-route-Id="@Model.Id"> Add articles </a></button>
+        
     </td>
     <td>
         <button class="alert-danger"><a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id"> Delete </a></button>
