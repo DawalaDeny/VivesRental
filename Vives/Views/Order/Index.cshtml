@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IList<OrderResult>
+
+<h1>Orders</h1>
+<button class="alert-success"><a class=" alert-success" asp-controller="Order" asp-action="Create"> Add order </a></button>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">first name</th>
+        <th scope="col">last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Returned at</th>
+        <th scope="col"># orderlines</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var order in Model)
+    {
+        <partial name="IndexPartial" model="order" />
+    }
+    </tbody>
+</table>

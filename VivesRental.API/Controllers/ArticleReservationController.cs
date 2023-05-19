@@ -45,7 +45,7 @@ namespace VivesRental.API.Controllers
 
         //Remove a reservation
         [HttpDelete("{id:Guid}")]
-        public async Task<IActionResult> UpdateAsync([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteAsync([FromRoute] Guid id)
         {
             var reservation = await reservationService.RemoveAsync(id);
             return Ok(reservation);

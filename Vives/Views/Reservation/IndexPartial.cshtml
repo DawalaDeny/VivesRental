@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model ArticleReservationResult
+
+<tr>
+    <td>@Model.ProductName</td>
+    <td>@Model.ArticleStatus</td>
+    <td>@Model.CustomerFirstName</td>
+    <td>@Model.CustomerLastName</td>
+    <td>@Model.FromDateTime</td>
+    <td>@Model.UntilDateTime</td>
+    <td>
+        
+        <button class="alert-danger"><a  asp-action="Delete" asp-route-id="@Model.Id"> Delete </a></button>
+
+    </td>
+</tr>

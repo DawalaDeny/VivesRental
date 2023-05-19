@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model ArticleReservationResult
+@{
+    var customers = ViewData["Customers"] as IList<CustomerResult>;
+    var articles = ViewData["Articles"] as IList<ArticleResult>;
+}
+<h1>Create reservation</h1>
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label asp-for="CustomerId" class="form-label">Customer</label>
+        <select asp-for="CustomerId" class="form-control">
+            <option value="">Select a customer</option>
+            @if (customers != null)
+            {
+                foreach (var customer in customers)
+                {
+                    <option value="@customer.Id">@customer.FirstName @customer.LastName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ArticleId" class="form-label">Article</label>
+        <select asp-for="ArticleId" class="form-control">
+            <option value="">Select an article</option>
+            @if (articles != null)
+            {
+                foreach (var article in articles)
+                {
+                    <option value="@article.Id">@article.ProductName status: @article.Status</option>
+                }
+            }
+        </select>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="FromDateTime" class="form-label">Start date</label>
+        <input asp-for="FromDateTime" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+   
+    </div>
+    <div class="mb-3">
+        <label asp-for="UntilDateTime" class="form-label">End date</label>
+        <input asp-for="UntilDateTime" class="form-control" value="@Model.UntilDateTime.ToString("yyyy-MM-ddTHH:mm")" />
+   
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

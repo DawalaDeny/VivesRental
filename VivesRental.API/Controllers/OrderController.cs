@@ -13,7 +13,6 @@ namespace VivesRental.API.Controllers
         private readonly OrderService orderService;
 
         public OrderController(OrderService orderService)
-
         {
             this.orderService = orderService;
         }

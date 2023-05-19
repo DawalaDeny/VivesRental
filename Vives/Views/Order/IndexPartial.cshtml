@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model OrderResult
+
+<tr>
+    <td>@Model.CustomerFirstName</td>
+    <td>@Model.CustomerLastName</td>
+    <td>@Model.CustomerEmail</td>
+    <td>@Model.CustomerPhoneNumber</td>
+    <td>@Model.CreatedAt</td>
+    <td>@Model.ReturnedAt</td>
+    <td>@Model.NumberOfOrderLines</td>
+</tr>

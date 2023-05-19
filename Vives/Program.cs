@@ -13,7 +13,8 @@ builder.Services.AddHttpClient("VivesRentalAPI",
 builder.Services.AddScoped<CustomerManagementSdk>();
 builder.Services.AddScoped<ProductManagementSdk>();
 builder.Services.AddScoped<ArticleSdk>();
-
+builder.Services.AddScoped<OrderSdk>();
+builder.Services.AddScoped<ReservationSdk>();
 
 var app = builder.Build();
 
