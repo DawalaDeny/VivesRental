@@ -8,9 +8,9 @@
 <form asp-action="Create" method="post">
     
     <div class="mb-3">
-        <label asp-for="ProductId" class="form-label">Assigned To</label>
+        <label asp-for="ProductId" class="form-label">For product:</label>
         <select asp-for="ProductId" class="form-control">
-            <option value="">(Choose something)</option>
+            <option value="">(Choose product)</option>
             @if (products != null)
             {
                 foreach (var product in products)
@@ -19,11 +19,16 @@
                 }
             }
         </select>
-     
     </div>
     <div class="mb-3">
-        <label asp-for="Status" class="form-label">Status</label>
-        <input asp-for="Status" class="form-control" />
+        <div class="mb-3">
+            <label class="form-label">Status:</label><br>
+            <input type="radio" asp-for="Status" value="0" /> Normal<br>
+            <input type="radio" asp-for="Status" value="1" /> Broken<br>
+            <input type="radio" asp-for="Status" value="2" /> InRepair<br>
+            <input type="radio" asp-for="Status" value="3" /> Lost<br>
+            <input type="radio" asp-for="Status" value="4" /> Destroyed<br>
+        </div>
    
     </div>
 
