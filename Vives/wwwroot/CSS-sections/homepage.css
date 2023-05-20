@@ -1,5 +1,15 @@
-﻿.titelke {
+﻿.notselectable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.titelke {
     font-size: 10em;
+    animation: 2s shake infinite alternate;
 }
 .redtext {
     color: red;
@@ -8,16 +18,63 @@
     color: blue;
     font-size: 0.5em;
 }
+.titletext {
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+   
+}
 .blockText {
-    background-color: lightcoral;
+    background-color: red;
     border-radius: 5px 20px 5px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
 }
 .boxke {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 20px 20px;
    
 }
+button a {
+    height: 100%;
+    width: 100%;
+}
 .hoverbutton:hover {
-    background-color: cornflowerblue;
-    color: cornflowerblue;
+    background-color: blue;
+}
+a:hover {
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+}
+
+@keyframes shake {
+    0% {
+        transform: skewX(-15deg);
+    }
+    5% {
+        transform: skewX(15deg);
+    }
+    10% {
+        transform: skewX(-15deg);
+    }
+    15% {
+        transform: skewX(15deg);
+    }
+    20% {
+        transform: skewX(0deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+@media (max-width: 767px) {
+    .redtext, .bluetext{
+        display: block;
+    }
+    .bluetext {
+        margin-top: -40px;
+    }
 }
