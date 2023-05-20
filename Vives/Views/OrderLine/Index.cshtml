@@ -1,0 +1,25 @@
+﻿@model IList<OrderLineResult>
+
+
+<h1>All orderlines</h1>
+<button class="alert-success"><a class=" alert-success" asp-controller="OrderLine" asp-action="RentSingle"> Rent article </a></button>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Product name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Rented at</th>
+        <th scope="col">Expires at</th>
+        <th scope="col">Returned at</th>
+        <th scope="col">Return</th>
+    </tr>
+    </thead>
+	<tbody>
+	@foreach (var orderline in Model)
+	{
+		<partial name="IndexPartial" model="orderline" />
+	}
+	</tbody>
+	
+</table>

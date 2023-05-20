@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    var orders = ViewData["orders"] as IList<OrderResult>;
+    var articles = ViewData["articles"] as IList<ArticleResult>;
+}
+
+<h1>Rent</h1>
+
+<form asp-action="RentSingle" method="post">
+    <div class="mb-3">
+        <label class="form-label">Order for:</label>
+        <select class="form-control" name="orderId">
+            <option value="">Select an order</option>
+            @if (orders != null)
+            {
+                foreach (var order in orders)
+                {
+                    <option value="@order.Id">@order.CustomerFirstName @order.CustomerLastName)</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Article:</label>
+        <select class="form-control" name="articleId">
+            <option value="">Select an article</option>
+            @if (articles != null)
+            {
+                foreach (var article in articles)
+                {
+                    <option value="@article.Id">@article.ProductName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

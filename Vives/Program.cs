@@ -15,6 +15,7 @@ builder.Services.AddScoped<ProductManagementSdk>();
 builder.Services.AddScoped<ArticleSdk>();
 builder.Services.AddScoped<OrderSdk>();
 builder.Services.AddScoped<ReservationSdk>();
+builder.Services.AddScoped<OrderLineSdk>();
 
 var app = builder.Build();
 

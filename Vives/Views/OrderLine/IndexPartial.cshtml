@@ -1,0 +1,10 @@
+﻿@model OrderLineResult
+
+<tr>
+    <td>@Model.ProductName</td>
+    <td>@Model.ProductDescription</td>
+    <td>@Model.RentedAt</td>
+    <td>@Model.ExpiresAt</td>
+    <td>@Model.ReturnedAt</td>
+    <td> <a asp-controller="OrderLine" asp-action="Return" asp-route-productId="@Model.Id">Return</a></td>
+</tr>

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using VivesRental.Services;
 using VivesRental.Services.Abstractions;
 using VivesRental.Services.Model.Requests;
+using VivesRental.UI.Models;
 
 namespace VivesRental.API.Controllers
 {
@@ -36,8 +37,11 @@ namespace VivesRental.API.Controllers
         }
         //Create orderline with 1 article?
         [HttpPost]
-        public async Task<IActionResult> RentAsync(Guid orderId, Guid articleId)
+        public async Task<IActionResult> RentAsync(RentSingle a)
         {
+            var articleId = a.articleId;
+            var orderId = a.orderId;
+
             var orderline = await lineService.RentAsync(orderId, articleId);
             return Ok(orderline);
         }
