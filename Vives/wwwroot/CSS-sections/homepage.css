@@ -8,4 +8,16 @@
     color: blue;
     font-size: 0.5em;
 }
-
+.blockText {
+    background-color: lightcoral;
+    border-radius: 5px 20px 5px;
+}
+.boxke {
+    margin-bottom: 10px;
+    border-radius: 20px 20px;
+   
+}
+.hoverbutton:hover {
+    background-color: cornflowerblue;
+    color: cornflowerblue;
+}

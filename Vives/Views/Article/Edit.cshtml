@@ -5,7 +5,7 @@
 <form asp-action="Edit" asp-method="post" asp-route-id="@Model.Id">
 
     <div class="mb-3">
-        <label class="form-label">Select status of article</label><br />
+        <label class="form-label">Select status of article:</label><br />
         <label>
             <input type="radio" name="Status" value="Normal" @(Model.Status.ToString() == "Normal" ? "checked" : "") />
             Normal
