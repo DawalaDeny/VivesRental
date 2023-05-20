@@ -1,4 +1,5 @@
-﻿
+﻿@using VivesRental.Enums
+@model IndexPaginaDetails
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -15,12 +16,37 @@
     <div class="row">
         <div class="col-lg-3 col-md-6  col-sm-12 boxke">
             <div class="blockText"> <h1 class="text-center titletext notselectable">Customers</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Customers.Count </span></p>
+                <p class="text-center text-white notselectable">Total orders: @{
+                                                              var totalOrders = 0;
+                                                              foreach (var customer in Model.Customers)
+                                                              {
+                                                                  totalOrders += customer.NumberOfOrders;
+                                                              }
+                                                                        <span class="fw-bold"> @totalOrders </span>
+                                                          }</p>
                 <div class="text-center">
                     <button class="boxke hoverbutton"><a class="nav-link text-dark" asp-area="" asp-controller="CustomerManagement" asp-action="index">Customer-Menu</a> </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 boxke">
             <div class="blockText"> <h1 class="text-center titletext notselectable">Products</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Products.Count</span> </p>
+                <p class="text-center text-white notselectable">Most articles: 
+                    @{
+                        var elsee = 0;
+                    var productWithMostArticles = Model.Products.OrderByDescending(p => p.NumberOfArticles).FirstOrDefault();
+                    if (productWithMostArticles != null)
+                    {
+                        <span class="fw-bold"> @productWithMostArticles.Name </span>
+                        ;
+                    }       
+                    else
+                    {
+                        <span class="fw-bold"> @elsee </span>
+                    }
+                }
+                    </p>
                 <div class="text-center">
                     <button class="boxke hoverbutton"><a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="index">Product-Menu</a> </div>
             </div>
@@ -28,6 +54,11 @@
         <div class="col-lg-3 col-md-6 col-sm-12 boxke">
             <div class="blockText">
                 <h1 class="text-center titletext notselectable">Articles</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Articles.Count</span> </p> 
+                <p class="text-center text-white notselectable">Normal status: <span class="fw-bold">@{
+                                                                                                         var normalArticleCount = Model.Articles.Count(a => a.Status == ArticleStatus.Normal);
+                                                                                                         @normalArticleCount
+                                                                                                     }</span> </p>
                 <div class="text-center">
                     <button class="boxke hoverbutton"><a class="nav-link text-dark" asp-area="" asp-controller="Article" asp-action="index">Article-Menu</a></button>
                 </div>
@@ -35,7 +66,25 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 boxke">
             <div class="blockText">
-                <h1 class="text-center titletext notselectable">Reservation</h1>
+                <h1 class="text-center titletext notselectable">Reservations</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Reservations.Count</span> </p>
+                <p class="text-center text-white notselectable">Closest end: <span class="fw-bold">
+                    @{
+                        var closestEndDate = Model.Reservations.OrderBy(r => r.UntilDateTime).FirstOrDefault()?.UntilDateTime;
+                        var formattedDate = closestEndDate?.ToString("dd-MM-yyyy");
+                        if (formattedDate != null)
+                        {
+                            @formattedDate.ToString()
+                            {
+                            }
+                        }
+                        else
+                        {
+                            int nul = 0;
+                            @nul;
+                        }
+                    }
+                </span> </p>
                 <div class="text-center">
                     <button class="boxke hoverbutton"><a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="index">Borrow-Menu</a> </div>
             </div>

@@ -50,6 +50,7 @@ a:hover {
     font-weight: bold;
 }
 
+
 @keyframes shake {
     0% {
         transform: skewX(-15deg);
