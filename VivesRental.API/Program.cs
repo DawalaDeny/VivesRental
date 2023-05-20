@@ -23,7 +23,8 @@ builder.Services.AddScoped<ArticleService>();
 
 builder.Services.AddDbContext<VivesRentalDbContext>(options =>
 {
-    options.UseInMemoryDatabase(nameof(VivesRentalDbContext));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("VivesRentalDbContext"));
+
 });
 
 var app = builder.Build();
@@ -31,6 +32,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    var scope = app.Services.CreateScope();
+    var dbContext = scope.ServiceProvider.GetRequiredService<VivesRentalDbContext>();
+
     app.UseSwagger();
     app.UseSwaggerUI();
     
