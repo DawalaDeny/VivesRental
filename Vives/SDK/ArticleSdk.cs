@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using VivesRental.Enums;
 using VivesRental.Services.Model.Requests;
 using VivesRental.Services.Model.Results;
 
@@ -52,15 +53,14 @@ namespace VivesRental.UI.SDK
             return await response.Content.ReadFromJsonAsync<ArticleResult>();
         }
 
-        public async Task<ArticleResult?> UpdateAsync(Guid id, ArticleRequest request)
+        public async Task UpdateAsync(Guid id, ArticleRequest request)
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = $"api/Article/{id}";
             var response = await client.PutAsJsonAsync(route, request);
-
+            
             response.EnsureSuccessStatusCode();
-
-            return await response.Content.ReadFromJsonAsync<ArticleResult>();
+            
         }
 
         public async Task DeleteAsync(Guid id)

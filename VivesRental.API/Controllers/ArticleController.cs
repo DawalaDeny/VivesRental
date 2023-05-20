@@ -45,9 +45,10 @@ namespace VivesRental.API.Controllers
 
         //Update status of an article
         [HttpPut("{id:Guid}")]
-        public async Task<IActionResult> UpdateAsync([FromRoute] Guid id, ArticleStatus request)
+        public async Task<IActionResult> UpdateAsync([FromRoute] Guid id, ArticleRequest request)
         {
-            var status = await articleService.UpdateStatusAsync(id, request);
+            var statusEnum = request.Status;
+            var status = await articleService.UpdateStatusAsync(id, statusEnum);
             return Ok(status);
         }
 

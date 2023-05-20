@@ -78,7 +78,7 @@ namespace VivesRental.UI.Controllers
             }
 
             await artSdk.UpdateAsync(id, request);
-
+            
             return RedirectToAction("Index");
         }
         [HttpGet]

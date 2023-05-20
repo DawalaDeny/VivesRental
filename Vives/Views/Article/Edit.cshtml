@@ -5,10 +5,29 @@
 <form asp-action="Edit" asp-method="post" asp-route-id="@Model.Id">
 
     <div class="mb-3">
-        <label asp-for="Status" class="form-label">Status</label>
-        <input asp-for="Status" class="form-control" />
-        <input type="hidden" asp-for="ProductId" />
+        <label class="form-label">Select status of article</label><br />
+        <label>
+            <input type="radio" name="Status" value="Normal" @(Model.Status.ToString() == "Normal" ? "checked" : "") />
+            Normal
+        </label><br />
 
+        <label>
+            <input type="radio" name="Status" value="Broken" @(Model.Status.ToString() == "Broken" ? "checked" : "") />
+            Broken
+        </label><br />
+        <label>
+            <input type="radio" name="Status" value="InRepair" @(Model.Status.ToString() == "InRepair" ? "checked" : "") />
+            In Repair
+        </label><br />
+        <label>
+            <input type="radio" name="Status" value="Lost" @(Model.Status.ToString() == "Lost" ? "checked" : "") />
+            Lost
+        </label><br />
+        <label>
+            <input type="radio" name="Status" value="Destroyed" @(Model.Status.ToString() == "Destroyed" ? "checked" : "") />
+            Destroyed
+        </label>
+        <input type="hidden" asp-for="ProductId" />
     </div>
 
     <a asp-action="Index" class="btn btn-secondary">Back</a>
