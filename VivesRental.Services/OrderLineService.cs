@@ -85,6 +85,7 @@ public class OrderLineService : IOrderLineService
         {
             var orderLine = article.CreateOrderLine(orderId);
             _context.OrderLines.Add(orderLine);
+            article.Status = ArticleStatus.Rented;
         }
 
         var numberOfObjectsUpdated = await _context.SaveChangesAsync();
@@ -100,6 +101,8 @@ public class OrderLineService : IOrderLineService
     public async Task<bool> ReturnAsync(Guid orderLineId, DateTime returnedAt)
     {
         var orderLine = await _context.OrderLines
+                //ander error, inladen article?
+            .Include(ol => ol.Article)
             .Where(ol => ol.Id == orderLineId)
             .FirstOrDefaultAsync();
 
@@ -119,8 +122,10 @@ public class OrderLineService : IOrderLineService
         }
 
         orderLine.ReturnedAt = returnedAt;
+        orderLine.Article.Status = ArticleStatus.Normal;
 
         await _context.SaveChangesAsync();
+        
         return true;
     }
 }

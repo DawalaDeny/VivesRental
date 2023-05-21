@@ -35,6 +35,7 @@ namespace Vives.Controllers
 			var listArticles = await artSdk.FindAsync();
 			var listOrders = await ordSdk.FindAsync();
 			var listReservations = await resSdk.FindAsync();
+            var listOrderlines = await orderLineSdk.FindAsync();
 
             var alles = new IndexPaginaDetails();
             alles.Customers = listCustomers;
@@ -42,6 +43,7 @@ namespace Vives.Controllers
 			alles.Orders = listOrders;
 			alles.Reservations = listReservations;
             alles.Products = listProducts;
+            alles.Orderlines = listOrderlines;
 			
             return View(alles);
 		}
@@ -77,6 +79,30 @@ namespace Vives.Controllers
         {
             var orderResult = await ordSdk.CreateAsync(customerId);
             await orderLineSdk.RentAsync(orderResult.Id, articleId);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RentMultiple()
+        {
+
+            var articles = await artSdk.FindAsync();
+        
+            var normalArticles = articles.Where(a => a.Status == ArticleStatus.Normal).ToList();
+            ViewData["articles"] = normalArticles;
+
+            var customers = await cusSdk.FindAsync();
+            ViewData["customers"] = customers;
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RentMultiple(IList<Guid> articleIds, Guid customerId)
+        {
+            var orderResult = await ordSdk.CreateAsync(customerId);
+            await orderLineSdk.RentMultipleAsync(orderResult.Id, articleIds);
 
             return RedirectToAction("Index");
         }

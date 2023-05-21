@@ -11,6 +11,7 @@ namespace VivesRental.UI.Models
         public IList<ArticleResult> Articles { get; set; }
         public IList<OrderResult> Orders { get; set; }
         public IList<ArticleReservationResult> Reservations { get; set; }
+        public IList<OrderLineResult> Orderlines { get; set; }
 
     }
 }

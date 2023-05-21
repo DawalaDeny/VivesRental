@@ -68,17 +68,15 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 boxke">
             <div class="blockText">
-                <h1 class="text-center titletext notselectable">Reservations</h1>
-                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Reservations.Count</span> </p>
-                <p class="text-center text-white notselectable">Closest end: <span class="fw-bold">
+                <h1 class="text-center titletext notselectable">Rents</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Orderlines.Count</span> </p>
+                <p class="text-center text-white notselectable">Ongoing rents: <span class="fw-bold">
                     @{
-                        var closestEndDate = Model.Reservations.OrderBy(r => r.UntilDateTime).FirstOrDefault()?.UntilDateTime;
-                        var formattedDate = closestEndDate?.ToString("dd-MM-yyyy");
-                        if (formattedDate != null)
+                        var rented = Model.Orderlines.Where(o => o.ReturnedAt == null);
+                        if (rented.Count() > 0)
                         {
-                            @formattedDate.ToString()
-                            {
-                            }
+                            @rented.Count();
+                            
                         }
                         else
                         {

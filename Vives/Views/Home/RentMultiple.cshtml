@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@section homepageshare
+    {
+    <partial name="homepageshare" />
+}
+
+@{
+    var customers = ViewData["customers"] as IList<CustomerResult>;
+    var articles = ViewData["articles"] as IList<ArticleResult>;
+}
+
+
+<h1>Rent multiple</h1>
+
+<form asp-action="RentMultiple" method="post">
+    <div class="mb-3">
+        <label class="form-label">Customer:</label>
+        <select class="form-control"  name="customerId">
+            <option value="">Select a customer</option>
+            @if (customers != null)
+            {
+                foreach (var customer in customers)
+                {
+                    <option value="@customer.Id">@customer.FirstName @customer.LastName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+    <div class="mb-3">
+        <label class="form-label">Articles:</label>
+        <select class="form-control" name="articleIds" multiple>
+            <option value="">Select articles</option>
+            @if (articles != null)
+            {
+                foreach (var article in articles)
+                {
+                    <option value="@article.Id">@article.ProductName</option>
+                }
+            }
+        </select>
+    </div>
+    </div>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
