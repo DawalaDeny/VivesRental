@@ -57,7 +57,7 @@
             <div class="blockText">
                 <h1 class="text-center titletext notselectable">Articles</h1>
                 <p class="text-center text-white notselectable">Amount: <span class="fw-bold">@Model.Articles.Count</span> </p> 
-                <p class="text-center text-white notselectable">Normal status: <span class="fw-bold">@{
+                <p class="text-center text-white notselectable">Available for rent: <span class="fw-bold">@{
                                                                                                          var normalArticleCount = Model.Articles.Count(a => a.Status == ArticleStatus.Normal);
                                                                                                          @normalArticleCount
                                                                                                      }</span> </p>

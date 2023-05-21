@@ -77,6 +77,10 @@ namespace Vives.Controllers
         [HttpPost]
         public async Task<IActionResult> RentSingle(Guid articleId, Guid customerId)
         {
+            if (customerId == Guid.Empty || articleId == Guid.Empty)
+            {
+                return RedirectToAction("Index");
+            }
             var orderResult = await ordSdk.CreateAsync(customerId);
             await orderLineSdk.RentAsync(orderResult.Id, articleId);
 
@@ -101,6 +105,10 @@ namespace Vives.Controllers
         [HttpPost]
         public async Task<IActionResult> RentMultiple(IList<Guid> articleIds, Guid customerId)
         {
+            if (customerId == Guid.Empty || articleIds.Count < 0)
+            {
+                return RedirectToAction("Index");
+            }
             var orderResult = await ordSdk.CreateAsync(customerId);
             await orderLineSdk.RentMultipleAsync(orderResult.Id, articleIds);
 
