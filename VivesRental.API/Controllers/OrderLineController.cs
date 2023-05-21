@@ -46,11 +46,13 @@ namespace VivesRental.API.Controllers
             return Ok(orderline);
         }
 
-
+        
         //Create orderline with * article?
         [HttpPost("*")]
-        public async Task<IActionResult> RentAsync(Guid orderId, [FromForm] IList<Guid> articleIds)
+        public async Task<IActionResult> RentAsync(RentMultiple a)
         {
+            var articleIds = a.articleIds;
+            var orderId = a.orderId;
             var orderline = await lineService.RentAsync(orderId, articleIds);
             return Ok(orderline);
         }

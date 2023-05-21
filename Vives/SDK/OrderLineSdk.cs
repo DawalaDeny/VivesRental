@@ -54,18 +54,17 @@ namespace VivesRental.UI.SDK
             response.EnsureSuccessStatusCode();
 
         }
-        public async Task<OrderLineResult?> RentMultipleAsync(Guid orderId, IList<Guid> articleIds)
+        public async Task RentMultipleAsync(Guid orderId, IList<Guid> articleIds)
         {
             var rent = new RentMultiple();
             rent.articleIds = articleIds;
             rent.orderId = orderId;
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
-            var route = "api/OrderLine/*";
+            var route = $"api/OrderLine/*";
             var response = await client.PostAsJsonAsync(route, rent);
 
             response.EnsureSuccessStatusCode();
-
-            return await response.Content.ReadFromJsonAsync<OrderLineResult>();
+            
         }
         public async Task ReturnAsync(Guid id)
         {

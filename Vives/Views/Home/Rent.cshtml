@@ -1,0 +1,29 @@
+﻿@model IList<ProductResult>
+@section homepageshare
+{
+    <partial name="homepageshare"/>
+}
+
+        <div class="container">
+            <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="boxke col-lg-4">
+                    <div class="blockText">
+                    <h2 class="text-white text-center text-decoration-underline"><span class="fw-bold">@product.Name</span> </h2>
+                    <p class="text-white text-center "><span class="fw-bold">@product.Description</span> </p>
+                    <p class="text-white text-center">Manufacturer:<span class="fw-bold"> @product.Manufacturer</span> </p>
+                    <p class="text-white text-center">Available: <span class="fw-bold">@product.NumberOfArticles</span> </p>
+
+                    </div>
+                </div>
+            }
+            <div class="boxke col-lg-12">
+                <div class="blockText text-center">
+                <button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="OrderLine" asp-action="RentSingle">Rent article</a></button>
+                <button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="OrderLine" asp-action="RentMultiple">Rent multiple articles</a></button>
+                </div>
+            </div>
+            
+    </div>
+    

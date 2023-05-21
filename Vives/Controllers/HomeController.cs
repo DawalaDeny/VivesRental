@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Vives.Models;
 using Vives.SDK;
+using VivesRental.Enums;
 using VivesRental.UI.Models;
 using VivesRental.UI.SDK;
 
@@ -41,9 +42,18 @@ namespace Vives.Controllers
 			
             return View(alles);
 		}
+        public async Task<IActionResult> Rent()
+        {
+            
+            var listArticles = await artSdk.FindAsync();
+            var listProducts = await proSdk.FindAsync();
 
+            var productsNormaalAanwezig = listProducts.Where(product => listArticles.Any(article => article.ProductId == product.Id && article.Status == ArticleStatus.Normal)).ToList();
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            return View(productsNormaalAanwezig);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

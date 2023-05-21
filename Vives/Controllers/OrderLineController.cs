@@ -51,6 +51,7 @@ namespace VivesRental.UI.Controllers
 
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public async Task<IActionResult> Return(Guid id)
         {
@@ -62,6 +63,30 @@ namespace VivesRental.UI.Controllers
         public async Task<IActionResult> ReturnOk(Guid id)
         {
             await Sdk.ReturnAsync(id);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RentMultiple()
+        {
+
+            var articles = await artSdk.FindAsync();
+            var normalArticles = articles.Where(a => a.Status == ArticleStatus.Normal).ToList(); ;
+            ViewData["articles"] = normalArticles;
+
+            var orders = await ordSdk.FindAsync();
+            var avaibleOrders = orders.Where(a => a.ReturnedAt == null).ToList();
+            ViewData["Orders"] = avaibleOrders;
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RentMultiple(IList<Guid> articleIds, Guid orderId)
+        {
+
+            await Sdk.RentMultipleAsync(orderId, articleIds);
+
             return RedirectToAction("Index");
         }
     }
