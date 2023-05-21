@@ -114,6 +114,19 @@ namespace Vives.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Return()
+        {
+
+            var orderlines = await orderLineSdk.FindAsync();
+
+            var ongoingOrderlines = orderlines.Where(a => a.ReturnedAt == null).ToList();
+            ViewData["orderlines"] = ongoingOrderlines;
+
+            return View(Guid.Empty);
+        }
+
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()

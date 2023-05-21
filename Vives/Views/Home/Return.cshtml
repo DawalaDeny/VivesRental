@@ -1,0 +1,51 @@
+﻿
+@section homepageshare
+{
+    <partial name="homepageshare" />
+}
+
+@model Guid
+@{
+    var orderlines = ViewData["orderlines"] as IList<OrderLineResult>;
+   
+}
+
+<h1>List ongoing rents</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Barcode</th>
+        <th scope="col">Product name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Rented at</th>
+        <th scope="col">Expires at</th>
+        <th scope="col">Return</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var orderline in orderlines)
+    {
+        <tr>
+            <td>@orderline.Id</td>
+            <td>@orderline.ProductName</td>
+            <td>@orderline.ProductDescription</td>
+            <td>@orderline.RentedAt</td>
+            <td>@orderline.ExpiresAt</td>
+                <td> <a asp-controller="OrderLine" asp-action="Return" asp-route-Id="@orderline.Id" class="btn btn-primary">Return</a></td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+<h2>Manually return via barcode</h2>
+<form asp-controller="OrderLine" asp-action="ReturnManually" method="post">
+    <div class="mb-3">
+        <label  class="form-label">BarCode</label>
+        <input  class="form-control" name="barcode" />
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <button type="submit" class="btn btn-primary">Return</button>
+</form>
+
+

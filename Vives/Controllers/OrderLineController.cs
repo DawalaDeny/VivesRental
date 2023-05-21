@@ -63,7 +63,7 @@ namespace VivesRental.UI.Controllers
         public async Task<IActionResult> ReturnOk(Guid id)
         {
             await Sdk.ReturnAsync(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -88,6 +88,17 @@ namespace VivesRental.UI.Controllers
             await Sdk.RentMultipleAsync(orderId, articleIds);
 
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ReturnManually(Guid barcode)
+        {
+            if (barcode == Guid.Empty)
+            {
+                return RedirectToAction("Return", "Home");
+            }
+            await Sdk.ReturnAsync(barcode);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -90,5 +90,26 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 boxke">
+            <div class="blockText">
+                <h1 class="text-center titletext notselectable">Returns</h1>
+                <p class="text-center text-white notselectable">Amount: <span class="fw-bold"> @{
+                                                                                                   var returnedCount = Model.Orderlines.Count(o => o.ReturnedAt != null);
+                                                                                                   @returnedCount;
+                                                                                               }</span> </p>
+                <p class="text-center text-white notselectable">Closest to expire: <span class="fw-bold">
+                    @{
+                        var closestToExpire = Model.Orderlines.OrderBy(o => o.ExpiresAt).Where(o=> o.ReturnedAt==null).FirstOrDefault();
+                        @if (closestToExpire != null)
+                        {
+                            @closestToExpire.ExpiresAt.ToString("dd-MM-yyyy");
+                        }
+                    }
+                </span> </p>
+                <div class="text-center">
+                    <button class="boxke hoverbutton"><a class="nav-link text-dark notselectable" asp-area="" asp-controller="Home" asp-action="Return">Return-Menu</a></button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
