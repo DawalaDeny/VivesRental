@@ -1,9 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model IList<CustomerResult>
+@section homepageshare
+    {
+        <partial name="homepageshare" />
+}
 
-<h1>Customer management</h1>
-<button class="alert-success"><a class=" alert-success" asp-controller="CustomerManagement" asp-action="AddCustomer"> Add a customer </a></button>
-
+<h1>All customers</h1>
+<button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="Home" asp-action="Index">Back</a></button>
+<button class="boxke2 hoverbutton"><a class="nav-link text-dark notselectable" asp-controller="CustomerManagement" asp-action="AddCustomer"> Add a customer </a></button>
 <table class="table">
     <thead>
     <tr>
@@ -23,3 +27,5 @@
     }
     </tbody>
 </table>
+
+

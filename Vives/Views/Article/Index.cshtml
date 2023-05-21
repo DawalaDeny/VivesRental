@@ -1,7 +1,13 @@
 ﻿@model IList<ArticleResult>
+@section homepageshare
+    {
+    <partial name="homepageshare" />
+}
 
 <h1>All articles</h1>
-<button class="alert-success"><a class=" alert-success" asp-controller="Article" asp-action="Create"> Add new article </a></button>
+<button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="Home" asp-action="Index">Back</a></button>
+<button class="boxke2 hoverbutton"><a class=" nav-link text-dark notselectable" asp-controller="Article" asp-action="Create"> Add new article </a></button>
+<button class="boxke2 hoverbutton"><a class=" nav-link text-dark notselectable" asp-controller="Product" asp-action="Index"> Add multiple articles </a></button>
 
 <table class="table">
     <thead>

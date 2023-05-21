@@ -1,27 +1,31 @@
 ﻿@model IList<ProductResult>
-
+@section homepageshare
+{
+    <partial name="homepageshare" />
+}
 
 <h1>All products</h1>
-<button class="alert-success"><a class=" alert-success" asp-controller="Product" asp-action="addProduct"> Add product </a></button>
-
+<button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="Home" asp-action="Index">Back</a></button>
+<button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-controller="Product" asp-action="addProduct"> Add product </a></button>
 <table class="table">
-	<thead>
-	<tr>
-		<th scope="col">Name</th>
-		<th scope="col">Description</th>
-		<th scope="col">Manufacturer</th>
-		<th scope="col">Publisher</th>
-		<th scope="col">Expiration days</th>
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Manufacturer</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Expiration days</th>
         <th scope="col">Articles</th>
-        <th scope="col">Add articles</th>
+        <th scope="col">Add multiple articles</th>
         <th scope="col">Delete/Edit</th>
-	</tr>
-	</thead>
-	<tbody>
-	@foreach (var product in Model)
-	{
-		<partial name="IndexPartial" model="product" />
-	}
-	</tbody>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <partial name="IndexPartial" model="product" />
+    }
+    </tbody>
 	
 </table>
+

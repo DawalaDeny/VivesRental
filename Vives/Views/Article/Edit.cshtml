@@ -26,11 +26,8 @@
         <label>
             <input type="radio" name="Status" value="Destroyed" @(Model.Status.ToString() == "Destroyed" ? "checked" : "") />
             Destroyed
-        </label><br/>
-        <label>
-            <input type="radio" name="Status" value="Rented" @(Model.Status.ToString() == "Rented" ? "checked" : "") />
-            Rented
         </label>
+        
         <input type="hidden" asp-for="ProductId" />
     </div>
 

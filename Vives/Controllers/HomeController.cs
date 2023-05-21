@@ -125,8 +125,17 @@ namespace Vives.Controllers
 
             return View(Guid.Empty);
         }
+        [HttpGet]
+        public async Task<IActionResult> CreateLot()
+        {
 
-       
+            var customers = await cusSdk.FindAsync();
+            ViewData["customers"] = customers;
+
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()

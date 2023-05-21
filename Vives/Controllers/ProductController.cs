@@ -97,6 +97,8 @@ namespace Vives.Controllers
             artikelsMakenVm.id = id;
             return View(artikelsMakenVm);
         }
+        [HttpGet]
+        
         [HttpPost]
         public async Task<IActionResult> AddArticlesAdd(ArtikelsMakenVM artikelsMakenVm)
         {
