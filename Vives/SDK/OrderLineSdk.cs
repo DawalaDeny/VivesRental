@@ -67,11 +67,11 @@ namespace VivesRental.UI.SDK
 
             return await response.Content.ReadFromJsonAsync<OrderLineResult>();
         }
-        public async Task ReturnAsync(Guid id, DateTime request)
+        public async Task ReturnAsync(Guid id)
         {
             var client = httpClientFactory.CreateClient("VivesRentalAPI");
             var route = $"api/OrderLine/{id}";
-            var response = await client.PutAsJsonAsync(route, request);
+            var response = await client.PutAsJsonAsync(route, Empty);
 
             response.EnsureSuccessStatusCode();
 

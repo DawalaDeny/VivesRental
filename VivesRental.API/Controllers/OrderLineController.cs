@@ -57,8 +57,9 @@ namespace VivesRental.API.Controllers
 
         //Return rented article
         [HttpPut("{id:Guid}")]
-        public async Task<IActionResult> UpdateAsync(Guid id, DateTime returnedAt)
+        public async Task<IActionResult> UpdateAsync(Guid id)
         {
+            var returnedAt = DateTime.Now;
             var orderline = await lineService.ReturnAsync(id, returnedAt);
             return Ok(orderline);
         }

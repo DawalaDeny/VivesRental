@@ -1,0 +1,11 @@
+﻿@model OrderLineResult
+
+<h1>Do you want to return this article? <span class="alert-info">@Model.ProductName</span> ?</h1>
+<form method="post">
+    <a asp-action="Index" class="btn btn-secondary">
+         No
+    </a>
+    <button type="submit" class="btn btn-danger">
+         Yes
+    </button>
+</form>

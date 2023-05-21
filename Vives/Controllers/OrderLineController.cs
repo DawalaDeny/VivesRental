@@ -51,5 +51,18 @@ namespace VivesRental.UI.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Return(Guid id)
+        {
+
+            var orderline = await Sdk.GetAsync(id);
+            return View(orderline);
+        }
+        [HttpPost("[controller]/Return/{id:Guid?}")]
+        public async Task<IActionResult> ReturnOk(Guid id)
+        {
+            await Sdk.ReturnAsync(id);
+            return RedirectToAction("Index");
+        }
     }
 }
