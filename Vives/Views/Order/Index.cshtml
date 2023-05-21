@@ -1,12 +1,17 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model IList<OrderResult>
-
+@section homepageshare
+{
+    <partial name="homepageshare" />
+}
 <h1>Orders</h1>
-<button class="alert-success"><a class=" alert-success" asp-controller="Order" asp-action="Create"> Add order </a></button>
+<button class="boxke2 hoverbutton "><a class="nav-link text-dark notselectable" asp-area="" asp-controller="Home" asp-action="Index">Back</a></button>
+<button class="boxke2 hoverbutton"><a class="nav-link text-dark notselectable" asp-controller="Order" asp-action="Create"> Add order </a></button>
+
 
 <table class="table">
     <thead>
-    <tr>
+        <tr><th scope="col">Order Id</th>
         <th scope="col">first name</th>
         <th scope="col">last name</th>
         <th scope="col">Email</th>

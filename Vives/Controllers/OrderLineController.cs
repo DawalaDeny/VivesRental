@@ -100,5 +100,14 @@ namespace VivesRental.UI.Controllers
             await Sdk.ReturnAsync(barcode);
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
+        public async Task<IActionResult> getSpecificOrderLines(Guid orderId)
+        {
+            
+            var orderlines = await Sdk.FindAsync();
+            var orderlinesvanorder = orderlines.Where(o => o.OrderId == orderId).ToList();
+
+            return View(orderlinesvanorder);
+        }
     }
 }

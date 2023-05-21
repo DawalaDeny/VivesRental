@@ -2,11 +2,14 @@
 @model OrderResult
 
 <tr>
+    <td>@Model.Id</td>
     <td>@Model.CustomerFirstName</td>
     <td>@Model.CustomerLastName</td>
     <td>@Model.CustomerEmail</td>
     <td>@Model.CustomerPhoneNumber</td>
     <td>@Model.CreatedAt</td>
     <td>@Model.ReturnedAt</td>
-    <td>@Model.NumberOfOrderLines</td>
+    <td>
+        <button class="btn-primary"><a class="text-white" asp-controller="OrderLine" asp-action="getSpecificOrderLines" asp-route-orderId="@Model.Id"> @Model.NumberOfOrderLines </a></button>
+    </td>
 </tr>
