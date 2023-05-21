@@ -9,23 +9,27 @@
         <label>
             <input type="radio" name="Status" value="Normal" @(Model.Status.ToString() == "Normal" ? "checked" : "") />
             Normal
-        </label><br />
+        </label><br/>
 
         <label>
             <input type="radio" name="Status" value="Broken" @(Model.Status.ToString() == "Broken" ? "checked" : "") />
             Broken
-        </label><br />
+        </label><br/>
         <label>
             <input type="radio" name="Status" value="InRepair" @(Model.Status.ToString() == "InRepair" ? "checked" : "") />
             In Repair
-        </label><br />
+        </label><br/>
         <label>
             <input type="radio" name="Status" value="Lost" @(Model.Status.ToString() == "Lost" ? "checked" : "") />
             Lost
-        </label><br />
+        </label><br/>
         <label>
             <input type="radio" name="Status" value="Destroyed" @(Model.Status.ToString() == "Destroyed" ? "checked" : "") />
             Destroyed
+        </label><br/>
+        <label>
+            <input type="radio" name="Status" value="Rented" @(Model.Status.ToString() == "Rented" ? "checked" : "") />
+            Rented
         </label>
         <input type="hidden" asp-for="ProductId" />
     </div>

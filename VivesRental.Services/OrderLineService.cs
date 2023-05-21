@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VivesRental.Enums;
 using VivesRental.Repository.Core;
 using VivesRental.Services.Abstractions;
 using VivesRental.Services.Extensions;
@@ -55,6 +56,7 @@ public class OrderLineService : IOrderLineService
         var orderLine = article.CreateOrderLine(orderId);
 
         _context.OrderLines.Add(orderLine);
+        article.Status = ArticleStatus.Rented;
         await _context.SaveChangesAsync();
 
         return true;

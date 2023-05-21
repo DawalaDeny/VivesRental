@@ -15,14 +15,17 @@ namespace Vives.Controllers
         private readonly ProductManagementSdk proSdk;
         private readonly ArticleSdk artSdk;
         private readonly ReservationSdk resSdk;
+        private readonly OrderLineSdk orderLineSdk;
 
-        public HomeController(OrderSdk ordSdk, CustomerManagementSdk cusSdk, ProductManagementSdk proSdk, ArticleSdk artSdk, ReservationSdk resSdk)
+        public HomeController(OrderSdk ordSdk, CustomerManagementSdk cusSdk, ProductManagementSdk proSdk, ArticleSdk artSdk, ReservationSdk resSdk, OrderLineSdk orderLineSdk)
         {
 			this.ordSdk = ordSdk;
             this.cusSdk = cusSdk;
 			this.proSdk = proSdk;
 			this.artSdk = artSdk;
 			this.resSdk = resSdk;
+            this.orderLineSdk = orderLineSdk;
+
         }
 
 		public async Task<IActionResult> Index()
@@ -50,7 +53,32 @@ namespace Vives.Controllers
 
             var productsNormaalAanwezig = listProducts.Where(product => listArticles.Any(article => article.ProductId == product.Id && article.Status == ArticleStatus.Normal)).ToList();
 
+
+
             return View(productsNormaalAanwezig);
+        }
+        [HttpGet]
+        public async Task<IActionResult> RentSingle()
+        {
+
+            var articles = await artSdk.FindAsync();
+            //selecteren alle artikelen met status normal, duplicaten (productnames) wegdoen, 
+            var normalArticles = articles.Where(a => a.Status == ArticleStatus.Normal).DistinctBy(a => a.ProductName).ToList();
+            ViewData["articles"] = normalArticles;
+
+            var customers = await cusSdk.FindAsync();
+            ViewData["customers"] = customers;
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RentSingle(Guid articleId, Guid customerId)
+        {
+            var orderResult = await ordSdk.CreateAsync(customerId);
+            await orderLineSdk.RentAsync(orderResult.Id, articleId);
+
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

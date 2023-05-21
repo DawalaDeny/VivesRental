@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2+DN32IZ9+Ejm0SplsL+f7kwGXr+Qyy+pMwfGf0+124=",
+  "Hash": "mR7qK0scWM3uD1k/HvJlmmFLvqu24LvmB/NmU+J9Oaw=",
   "Source": "VivesRental.UI",
   "BasePath": "_content/VivesRental.UI",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\IMG\\Logo VIVES Hogeschool - Smile.png",
+      "SourceId": "VivesRental.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\",
+      "BasePath": "_content/VivesRental.UI",
+      "RelativePath": "IMG/Logo VIVES Hogeschool - Smile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\Logo VIVES Hogeschool - Smile.png"
     },
     {
       "Identity": "C:\\Users\\shabo\\source\\repos\\DawalaDeny\\VivesRental\\Vives\\wwwroot\\js\\site.js",
