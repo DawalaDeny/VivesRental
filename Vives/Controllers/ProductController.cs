@@ -60,7 +60,17 @@ namespace Vives.Controllers
         [HttpPost("[controller]/Delete/{id:Guid?}")]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await Sdk.DeleteAsync(id);
+            try
+            {
+                await Sdk.DeleteAsync(id);
+            }
+            catch (Exception ex)
+            {
+
+                return View("ErrorPage", ex);
+
+            }
+            
             return RedirectToAction("Index");
 
         }
